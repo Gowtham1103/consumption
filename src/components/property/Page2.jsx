@@ -73,7 +73,7 @@ const Page2 = ({ total, totalpl }) => {
                       >
                         <h5 className="title-p">CLOUD GRAZE</h5>
                         <div className="main-div">
-                          Total : {totalLiter} Liters
+                          Total : {(totalLiter / 1000).toFixed(2)} KL
                         </div>
                         <h6 className="main-div">Total Flowmeters: {130}</h6>
                       </div>
@@ -99,7 +99,7 @@ const Page2 = ({ total, totalpl }) => {
                     >
                       <h5 className="title-p">PLUTUS</h5>
                       <div className="main-div">
-                        Total : {totalLiterpl} Liters
+                        Total :{(totalLiterpl / 1000).toFixed(2)} KL
                       </div>
                       <h6 className="main-div">Total Flowmeters: {478}</h6>
                     </div>
