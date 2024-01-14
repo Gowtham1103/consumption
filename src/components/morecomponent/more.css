@@ -1,0 +1,85 @@
+.top-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.container {
+  background-color: whitesmoke;
+
+  height: 100%;
+  width: 180vh;
+}
+
+.para {
+  color: rgb(205, 24, 24);
+  font-size: x-small;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-weight: bold;
+  padding: 15px;
+}
+.month-al {
+  font-weight: bold;
+  width: 380px;
+
+  border: 3px solid #2e2e30;
+}
+
+.month-with {
+  width: 25%;
+
+  align-items: flex-start;
+}
+.Datepicker {
+  border: 1px solid black;
+}
+
+.btn-color {
+  background-color: #2e2e30;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+}
+
+.flat-no {
+  height: 55px;
+  width: 55px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(88, 203, 203);
+  color: #2c284a;
+
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.table-head-more {
+  background-color: #2e2e30;
+  color: white;
+  font-size: large;
+}
+
+.lab {
+  width: 100px;
+  font-size: larger;
+}
+tr:nth-child(even) {
+  background-color: #d7dddd;
+}

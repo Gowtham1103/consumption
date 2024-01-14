@@ -1,0 +1,109 @@
+.body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    267deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(236, 242, 137, 1) 0%,
+    rgba(0, 212, 255, 1) 82%
+  );
+  position: relative;
+  min-height: 100vh;
+}
+
+.container-fluid {
+  height: 100vh;
+}
+
+.cen-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 25%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-card-p {
+  margin-bottom: 10%;
+}
+
+.card-container-p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.building-card-p {
+  position: relative;
+  overflow: hidden;
+  width: 309px;
+  height: 360px;
+  box-shadow: 5px 5px 10px #212020;
+  border-radius: 15px;
+}
+
+.colspan-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.building-img-p {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.right-arrow-p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+
+.informations-container-p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(212, 209, 151, 0.7);
+  padding: 10px;
+  transform: translateY(60%);
+  transition: transform 0.47s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.informations-container-p h2 {
+  margin-bottom: 5px;
+}
+
+.building-card-p:hover .informations-container-p {
+  transform: translateY(0);
+}
+.total-p {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-size: x-large;
+}
+.month-card-p {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.title-p {
+  color: black;
+  font-weight: 500;
+  font-size: x-large;
+  padding-bottom: 12px;
+}
+.main-div {
+  font-weight: bolder;
+  padding-top: 5px;
+}

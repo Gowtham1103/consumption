@@ -1,0 +1,211 @@
+.whole {
+  background-color: white;
+  width: 800px;
+}
+.main-container-i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecebeb;
+}
+.header-img {
+  width: 100%;
+}
+.bold {
+  font-weight: bold;
+}
+.date {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+  height: 10px;
+  font-weight: bold;
+}
+
+.input-top {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.in-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  border: 1px solid black;
+  height: 45px;
+  width: 190px;
+  padding-left: 10px;
+}
+.pad {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-btn {
+  padding-left: 30px;
+}
+.userbtn {
+  height: 35px;
+  width: 220px;
+  background-color: #fed000;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px;
+}
+.userbtn2 {
+  margin-top: 25px;
+}
+
+.save-can-space {
+  margin-left: 22px;
+  height: 35px;
+  width: 100px;
+  margin-top: 25px;
+}
+
+.address-section {
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+.set-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.month {
+  width: 190px;
+  height: 35px;
+  background-color: rgb(252, 249, 249);
+  margin-right: 40px;
+  border: 1px solid black;
+
+  border-radius: 5px;
+}
+
+.table-head {
+  background-color: #000080;
+  color: rgb(255, 255, 255);
+}
+
+.table-border {
+  border-bottom: 1px solid black;
+}
+.table-padding {
+  padding: 30px;
+  white-space: nowrap;
+}
+.table-radius {
+  border-radius: 0;
+}
+.value {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.bottom {
+  border-bottom: 1px solid black;
+  width: 250px;
+}
+
+.totals-section {
+  padding: 30px;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.preview-btn {
+  height: 35px;
+  width: 160px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px;
+}
+
+.green {
+  background-color: rgb(41, 163, 41);
+  border: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px;
+}
+
+.red {
+  background-color: rgb(214, 45, 45);
+  border: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px;
+}
+.pad-pre {
+  margin: 10px;
+}
+
+@media (max-width: 767px) {
+  .whole {
+    width: 800px;
+    zoom: 0%;
+  }
+  .input-field {
+    width: 130px;
+  }
+  .month {
+    width: 100px;
+  }
+  .userbtn {
+    width: 140px;
+  }
+  .address-section {
+    font-size: small;
+  }
+  .date {
+    font-size: small;
+  }
+  .bold {
+    font-size: small;
+  }
+  p {
+    font-size: small;
+  }
+  .preview-btn {
+    width: 120px;
+  }
+}
+
+@media print {
+  .preview-btn,
+  .userbtn,
+  .green,
+  .inp-hidden,
+  .red,
+  .month,
+  .preview {
+    display: none !important;
+  }
+  .input-field {
+    width: auto;
+  }
+}
+.grand-total {
+  margin-top: 10px;
+}
+.tot {
+  background-color: #ebd575;
+  height: 40px;
+}
+@media (max-width: 600px) {
+  .main-container-i {
+    width: 95vh;
+  }
+}
