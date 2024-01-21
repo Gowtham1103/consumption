@@ -11,7 +11,7 @@ const CloudGraze = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://pleasant-pollution-production.up.railway.app/api/data.spring"
+          "https://www.gowatr.com/wms/consumption/api/cg.php"
         );
         setData(response.data);
       } catch (error) {

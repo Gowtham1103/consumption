@@ -110,7 +110,7 @@ const TableData = ({ data }) => {
                     Generate Bill
                   </button>
                 </td>
-                <td>{data.current_month_tot[index]}</td>
+                <td>{data.Current_month_tot[index]}</td>
                 <td>{data.last_tot[index]}</td>
                 <td>
                   <div className="action-buttons">
