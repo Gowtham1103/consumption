@@ -12,7 +12,7 @@ const FetchingData = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.gowatr.com/wms/consumption/api/cg.php"
+          "https://dapper-window-production.up.railway.app/api.cg/getdata/1"
         );
         setServerData(response.data);
       } catch (error) {

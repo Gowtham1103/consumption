@@ -1,0 +1,2 @@
+http://www.gowatr.com/wms/consumption/api/pl.php
+https://www.gowatr.com/wms/consumption/api/cg.php

@@ -13,7 +13,7 @@ const FetchingData2 = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://www.gowatr.com/wms/consumption/api/pl.php"
+          "https://dapper-window-production.up.railway.app/api.pl/getdata/1"
         );
         setServerData(response.data);
       } catch (error) {
