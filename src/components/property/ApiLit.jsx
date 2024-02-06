@@ -9,7 +9,7 @@ const ApiLit = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.gowatr.com/wms/consumption/api/totalconsumption.php?total=cg"
+          "https://dapper-window-production.up.railway.app/cg.tot/get"
         );
 
         console.log(response.data);
@@ -27,7 +27,7 @@ const ApiLit = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.gowatr.com/wms/consumption/api/totalconsumption.php?total=pl"
+          "https://dapper-window-production.up.railway.app/pl.tot/get"
         );
 
         console.log(response.data);
