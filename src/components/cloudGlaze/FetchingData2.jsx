@@ -13,9 +13,9 @@ const FetchingData2 = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://dapper-window-production.up.railway.app/api.pl/getdata/1"
+          "https://api.jsonbin.io/v3/b/65e32be41f5677401f37364a"
         );
-        setServerData(response.data);
+        setServerData(response.data.record);
       } catch (error) {
         console.log(error);
       }

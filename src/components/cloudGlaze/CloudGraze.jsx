@@ -11,9 +11,9 @@ const CloudGraze = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://dapper-window-production.up.railway.app/api.cg/getdata/1"
+          "https://api.jsonbin.io/v3/b/65e332891f5677401f373932"
         );
-        setData(response.data);
+        setData(response.data.record);
       } catch (error) {
         console.error("Error fetching data:", error);
       }

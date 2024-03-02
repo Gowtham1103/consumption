@@ -12,9 +12,10 @@ const FetchingData = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://dapper-window-production.up.railway.app/api.cg/getdata/1"
+          "https://api.jsonbin.io/v3/b/65e332891f5677401f373932"
         );
-        setServerData(response.data);
+        setServerData(response.data.record);
+        console.log(serverData);
       } catch (error) {
         console.log(error);
       }

@@ -1,48 +1,41 @@
 import React, { useEffect, useState } from "react";
 import fm1 from "/public/fm1.png";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 const PlutusTable = ({ data }) => {
-  console.log(data);
   var cgName = "Plutus";
-  const time1 = data.time;
 
-  let deactiveMeters = 0;
-  let activeMeters = 0;
+const time1 = data.record.time;
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:3001/check-and-send-email")
-      .then((response) => console.log(response.data))
-      .catch((error) => console.error(error));
-  }, [activeMeters]);
+let deactiveMeters = 0;
+let activeMeters = 0;
 
-  const StatusCalculation = () => {
-    if (Array.isArray(data.time)) {
-      data.time.forEach((doorStatus) => {
-        if (Array.isArray(doorStatus)) {
-          doorStatus.forEach((status) => {
-            if (status === "active") {
-              activeMeters++;
-            } else if (status === "deactive") {
-              deactiveMeters++;
-            } else {
-              console.error("Invalid status found:", status);
-            }
-          });
-        } else {
-          console.error("Each door status should be an array:", doorStatus);
-        }
-      });
-    } else {
-      console.error("Data time should be an array:", data.time);
-    }
-  };
-
-  {
-    time1 ? StatusCalculation() : "ok";
+const StatusCalculation = () => {
+  if (Array.isArray(data.record.time)) {
+    data.record.time.forEach((doorStatus) => {
+      if (Array.isArray(doorStatus)) {
+        doorStatus.forEach((status) => {
+          if (status === "active") {
+            activeMeters++;
+          } else if (status === "deactive") {
+            deactiveMeters++;
+          } else {
+            console.error("Invalid status found:", status);
+          }
+        });
+      } else {
+        console.error("Each door status should be an array:", doorStatus);
+      }
+    });
+  } else {
+    console.error("Data time should be an array:", data.record.time);
   }
+};
+
+{
+  time1 ? StatusCalculation() : "ok";
+}
+
 
   const navigate = useNavigate();
   const previousBtn = () => {
@@ -101,13 +94,13 @@ const PlutusTable = ({ data }) => {
           </thead>
 
           <tbody>
-            {data.door_no.map((doorNo, index) => (
+            {data.record.door_no.map((doorNo, index) => (
               <tr key={index}>
                 <td>{doorNo}</td>
                 <td>
                   <div className="row tablesize">
-                    {Array.isArray(data.time[index]) ? (
-                      data.time[index].slice(0, 4).map((status, innerIndex) => (
+                    {Array.isArray(data.record.time[index]) ? (
+                      data.record.time[index].slice(0, 4).map((status, innerIndex) => (
                         <span
                           key={innerIndex}
                           className={`circle ${
@@ -120,14 +113,14 @@ const PlutusTable = ({ data }) => {
                     ) : (
                       <span>{`Data Not Found `}</span>
                     )}
-                    {Array.isArray(data.time[index]) &&
-                      data.time[index].length > 4 && (
-                        <span>{`+${data.time[index].length - 4} more`}</span>
+                    {Array.isArray(data.record.time[index]) &&
+                      data.record.time[index].length > 4 && (
+                        <span>{`+${data.record.time[index].length - 4} more`}</span>
                       )}
                   </div>
                 </td>
                 <td className="gen-last">
-                  {data.last_month_tot[index]}
+                  {data.record.last_month_tot[index]}
 
                   <button
                     className="generate-bill-button-t"
@@ -136,8 +129,8 @@ const PlutusTable = ({ data }) => {
                     Generate Bill
                   </button>
                 </td>
-                <td>{data.current_month_tot[index]}</td>
-                <td>{data.last_tot[index]}</td>
+                <td>{data.record.Current_month_tot[index]}</td>
+                <td>{data.record.last_tot[index]}</td>
                 <td>
                   <div className="action-buttons">
                     <button

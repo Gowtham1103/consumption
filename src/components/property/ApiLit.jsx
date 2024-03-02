@@ -9,11 +9,9 @@ const ApiLit = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://dapper-window-production.up.railway.app/cg.tot/get"
+          "https://api.jsonbin.io/v3/b/65e33367266cfc3fde9225e8"
         );
-
-        console.log(response.data);
-        setTotal(response.data);
+        setTotal(response.data.record);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -27,11 +25,9 @@ const ApiLit = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://dapper-window-production.up.railway.app/pl.tot/get"
+          "https://api.jsonbin.io/v3/b/65e333ba266cfc3fde92260f"
         );
-
-        console.log(response.data);
-        setTotalpl(response.data);
+        setTotalpl(response.data.record);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
