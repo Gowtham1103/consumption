@@ -6,7 +6,6 @@ import ApiLit from "./components/property/ApiLit";
 import FetchingData from "./components/Invoice/FetchingData";
 import LoginLogic from "./components/loginpage/LoginLogic";
 import DownloadInvoice from "./components/Invoice/DownloadInvoice";
-import More from "./components/morecomponent/More";
 import FetchMore from "./components/morecomponent/FetchMore";
 import FetchPlutus from "./components/plutus/FetchPlutus";
 import FetchingData2 from "./components/cloudGlaze/FetchingData2";
